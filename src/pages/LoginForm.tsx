@@ -1,3 +1,9 @@
+/*
+ * Copyright (c) Alessio Saltarin 2019.
+ * Project SmartReact TS
+ * MIT License - see LICENSE
+ */
+
 import React from 'react';
 import { Button, Form, Grid, Header, Message, Segment } from 'semantic-ui-react';
 import { Link } from 'react-router-dom';

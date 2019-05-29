@@ -1,3 +1,9 @@
+/*
+ * Copyright (c) Alessio Saltarin 2019.
+ * Project SmartReact TS
+ * MIT License - see LICENSE
+ */
+
 // This optional code is used to register a service worker.
 // register() is not called by default.
 

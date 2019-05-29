@@ -1,3 +1,9 @@
+/*
+ * Copyright (c) Alessio Saltarin 2019.
+ * Project SmartReact TS
+ * MIT License - see LICENSE
+ */
+
 import React from 'react';
 import ReactDOM from 'react-dom';
 import 'semantic-ui-css/semantic.min.css';

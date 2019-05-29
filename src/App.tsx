@@ -1,3 +1,9 @@
+/*
+ * Copyright (c) Alessio Saltarin 2019.
+ * Project SmartReact TS
+ * MIT License - see LICENSE
+ */
+
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import './App.css';

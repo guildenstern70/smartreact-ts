@@ -1,3 +1,9 @@
+/*
+ * Copyright (c) Alessio Saltarin 2019.
+ * Project SmartReact TS
+ * MIT License - see LICENSE
+ */
+
 module.exports =  {
     parser:  '@typescript-eslint/parser',  // Specifies the ESLint parser
     extends:  [
