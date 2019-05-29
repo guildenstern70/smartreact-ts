@@ -9,7 +9,7 @@ import './FixedMenu.css';
 
 import { Container, Dropdown, Menu } from 'semantic-ui-react';
 import { Link } from 'react-router-dom';
-import AnimatedLogo from './AnimatedLogo';
+import AnimatedLogo from '../AnimatedLogo';
 
 const FixedMenu: React.FunctionComponent<{}> = () => (
     <Menu inverted>

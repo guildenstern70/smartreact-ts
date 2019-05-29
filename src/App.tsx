@@ -5,8 +5,9 @@
  */
 
 import React from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import './App.css';
+
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import LoginForm from './pages/LoginForm';
 import Home from './pages/Home';
 import AnotherPage from './pages/AnotherPage';

@@ -5,6 +5,8 @@
  */
 
 import React from 'react';
+import './AnimatedLogo.css';
+
 import logo from './logo.svg';
 import { Image, SemanticSIZES } from 'semantic-ui-react';
 

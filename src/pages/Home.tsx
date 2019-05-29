@@ -5,8 +5,9 @@
  */
 
 import React from 'react';
-import TemplatePage from '../components/TemplatePage';
 import { Button } from 'semantic-ui-react';
+import TemplatePage from '../components/layout/TemplatePage';
+import MagicBox from '../components/MagicBox';
 
 interface HomeProps {
     style: string;
@@ -32,7 +33,9 @@ export default class Home extends React.Component<HomeProps, HomeState> {
                         <Button secondary>Stateful Box</Button>
                     </div>
                 }
-            />
+            >
+                <MagicBox display={this.state.showMagicBox} text="Magic Box" />
+            </TemplatePage>
         );
     }
 
@@ -46,7 +49,7 @@ export default class Home extends React.Component<HomeProps, HomeState> {
         this.handleClick = this.handleClick.bind(this);
     }
 
-    componentDidMount() {
+    componentDidMount(): void {
         document.title = 'SmartReact | ' + this.TITLE;
     }
 
