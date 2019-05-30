@@ -20,25 +20,6 @@ interface HomeState {
 export default class Home extends React.Component<HomeProps, HomeState> {
     TITLE = 'Home';
 
-    render(): React.ReactNode {
-        return (
-            <TemplatePage
-                title={'Home Page'}
-                description={Home.description()}
-                buttons={
-                    <div>
-                        <Button onClick={this.handleClick} primary>
-                            Magic Box
-                        </Button>
-                        <Button secondary>Stateful Box</Button>
-                    </div>
-                }
-            >
-                <MagicBox display={this.state.showMagicBox} text="Magic Box" />
-            </TemplatePage>
-        );
-    }
-
     constructor(props: HomeProps) {
         super(props);
         this.state = {
@@ -58,6 +39,25 @@ export default class Home extends React.Component<HomeProps, HomeState> {
         this.setState({
             showMagicBox: !this.state.showMagicBox,
         });
+    }
+
+    render(): React.ReactNode {
+        return (
+            <TemplatePage
+                title={'Home Page'}
+                description={Home.description()}
+                buttons={
+                    <div>
+                        <Button onClick={this.handleClick} primary>
+                            Magic Box
+                        </Button>
+                        <Button secondary>Stateful Box</Button>
+                    </div>
+                }
+            >
+                <MagicBox display={this.state.showMagicBox} text="Magic Box" />
+            </TemplatePage>
+        );
     }
 
     static description(): string {

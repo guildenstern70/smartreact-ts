@@ -95,7 +95,7 @@ export default class LoginForm extends React.Component<LoginProps, LoginState> {
                             </Segment>
                         </Form>
                         <Message>
-                            New to us? <Link to="/home">Sign Up</Link>
+                            Bored? <Link to="/home">Skip</Link>
                         </Message>
                     </Grid.Column>
                 </Grid>

@@ -6,6 +6,7 @@
 
 import React from 'react';
 import './MagicBox.css';
+import { Card, Icon, Image } from 'semantic-ui-react';
 
 interface MagicBoxProps {
     display: boolean;
@@ -13,20 +14,46 @@ interface MagicBoxProps {
 }
 
 export default class MagicBox extends React.Component<MagicBoxProps> {
+    componentStyle: string;
+
     constructor(props: MagicBoxProps) {
         super(props);
+        this.componentStyle = 'notdisplayed';
         console.log('Display magic box: ' + this.props.display);
     }
 
-    displayOrNot(): string {
+    componentDidMount(): void {
+        this.updateVisibility();
+    }
+
+    updateVisibility(): void {
         if (this.props.display) {
-            return 'magicbox aqua displayed';
+            this.componentStyle = 'displayed';
+        } else {
+            this.componentStyle = 'notdisplayed';
         }
-        return 'magicbox aqua notdisplayed';
     }
 
     render(): React.ReactNode {
-        const style = this.displayOrNot();
-        return <div className={style}>{this.props.text}</div>;
+        this.updateVisibility(); // Update visibility on each new rendering
+
+        return (
+            <div className={this.componentStyle}>
+                <Card>
+                    <Image src="/img/matthew.png" wrapped ui={false} />
+                    <Card.Content>
+                        <Card.Header>{this.props.text}</Card.Header>
+                        <Card.Meta>
+                            <span className="date">Joined in 2015</span>
+                        </Card.Meta>
+                        <Card.Description>The box is in a card.</Card.Description>
+                    </Card.Content>
+                    <Card.Content extra>
+                        <Icon name="user" />
+                        22 Friends
+                    </Card.Content>
+                </Card>
+            </div>
+        );
     }
 }
