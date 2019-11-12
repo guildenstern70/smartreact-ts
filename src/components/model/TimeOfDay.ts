@@ -4,13 +4,7 @@
  * MIT License - see LICENSE
  */
 
-.displayed {
-    display: block;
+export interface TimeOfDay {
+    description: string;
+    color: string;
 }
-
-.notdisplayed {
-    display: none;
-}
-
-
-

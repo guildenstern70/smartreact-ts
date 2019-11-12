@@ -4,13 +4,24 @@
  * MIT License - see LICENSE
  */
 
-.displayed {
+.rightdisplayed {
     display: block;
+    float: right;
 }
 
 .notdisplayed {
     display: none;
 }
 
+.pink {
+    background: pink;
+}
 
+.orange {
+    background: orange;
+}
+
+.night {
+    background: darkblue;
+}
 

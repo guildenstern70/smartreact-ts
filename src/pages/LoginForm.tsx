@@ -5,9 +5,8 @@
  */
 
 import React from 'react';
-import { Button, Form, Grid, Header, Message, Segment } from 'semantic-ui-react';
+import { Button, Form, Grid, Header, Message, Segment, Image } from 'semantic-ui-react';
 import { Link } from 'react-router-dom';
-import AnimatedLogo from '../components/AnimatedLogo';
 
 interface LoginState {
     username: string;
@@ -67,8 +66,9 @@ export default class LoginForm extends React.Component<LoginProps, LoginState> {
                 `}</style>
                 <Grid textAlign="center" style={{ height: '100%' }} verticalAlign="middle">
                     <Grid.Column style={{ maxWidth: 450 }}>
-                        <Header as="h2" color="blue" textAlign="center">
-                            <AnimatedLogo size="medium" /> Log-in to your account
+                        <Image centered size="small" src="/img/logo.png" />
+                        <Header as="h3" color="blue" textAlign="center">
+                            Log-in to your account
                         </Header>
                         <Form size="large">
                             <Segment stacked>
@@ -95,7 +95,7 @@ export default class LoginForm extends React.Component<LoginProps, LoginState> {
                             </Segment>
                         </Form>
                         <Message>
-                            Bored? <Link to="/home">Skip</Link>
+                            <Link to="/home">You may skip this</Link>
                         </Message>
                     </Grid.Column>
                 </Grid>
