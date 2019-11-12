@@ -4,6 +4,11 @@
  * MIT License - see LICENSE
  */
 
+.displayedRight {
+    display: block;
+    float: right;
+}
+
 .displayed {
     display: block;
 }
@@ -11,6 +16,3 @@
 .notdisplayed {
     display: none;
 }
-
-
-

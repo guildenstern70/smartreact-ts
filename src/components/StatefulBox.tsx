@@ -8,6 +8,7 @@ import React from 'react';
 import './StatefulBox.css';
 import { TimeOfDay } from './model/TimeOfDay';
 import { Card, Icon, Image } from 'semantic-ui-react';
+import Displayable from './Displayable';
 
 interface StatefulProps {
     display: boolean;
@@ -19,8 +20,8 @@ interface StatefulState {
 }
 
 const MORNING: TimeOfDay = { description: 'Morning', color: 'pink' };
-const NOON: TimeOfDay = { description: 'Noon', color: 'orange' };
-const NIGHT: TimeOfDay = { description: 'Night', color: 'night' };
+const NOON: TimeOfDay = { description: 'Noon', color: 'orange'};
+const NIGHT: TimeOfDay = { description: 'Night', color: 'night'};
 
 export default class StatefulBox extends React.Component<StatefulProps, StatefulState> {
     state = {
@@ -54,6 +55,10 @@ export default class StatefulBox extends React.Component<StatefulProps, Stateful
         });
     }
 
+    componentDidMount(): void {
+        this.updateState();
+    }
+
     getAssociatedImage(): string {
         let image;
         switch (this.state.timeOfDay) {
@@ -69,24 +74,11 @@ export default class StatefulBox extends React.Component<StatefulProps, Stateful
         return image;
     }
 
-    componentDidMount(): void {
-        this.updateState();
-    }
-
-    displayOrNot(): string {
-        if (this.props.display) {
-            return 'rightdisplayed';
-        }
-        return 'notdisplayed';
-    }
-
-    render() {
-        const style = this.displayOrNot();
-
+    render(): React.ReactNode {
         return (
-            <div className={style}>
+            <Displayable display={this.props.display} floatRight={true}>
                 <Card>
-                    <Image src={this.getAssociatedImage()} wrapped ui={false} />
+                    <Image src={this.getAssociatedImage()} wrapped ui={false}/>
                     <Card.Content>
                         <Card.Header>{this.state.timeOfDay.description}</Card.Header>
                         <Card.Meta>
@@ -95,11 +87,11 @@ export default class StatefulBox extends React.Component<StatefulProps, Stateful
                         <Card.Description>Try this in different hours to see it change.</Card.Description>
                     </Card.Content>
                     <Card.Content extra>
-                        <Icon name="user" />
+                        <Icon name="user"/>
                         22 Friends
                     </Card.Content>
                 </Card>
-            </div>
+            </Displayable>
         );
     }
 }
