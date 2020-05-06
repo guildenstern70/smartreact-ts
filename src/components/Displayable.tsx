@@ -13,7 +13,6 @@ interface DisplayableProps {
 }
 
 export default class Displayable extends React.Component<DisplayableProps> {
-
     static defaultProps = {
         floatRight: false,
     };

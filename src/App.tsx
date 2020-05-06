@@ -6,23 +6,27 @@
 
 import React from 'react';
 import './App.css';
+import { Provider } from 'react-redux';
 
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import LoginForm from './pages/LoginForm';
 import Home from './pages/Home';
 import AnotherPage from './pages/AnotherPage';
+import store from './redux/Store';
 
 const App: React.FC = (): React.ReactElement => {
     document.title = 'SmartReact';
 
     return (
-        <Router>
-            <Switch>
-                <Route path="/" exact component={LoginForm} />
-                <Route path="/home" component={Home} />
-                <Route path="/anotherpage" component={AnotherPage} />
-            </Switch>
-        </Router>
+        <Provider store={store}>
+            <Router>
+                <Switch>
+                    <Route path="/" exact component={LoginForm} />
+                    <Route path="/home" component={Home} />
+                    <Route path="/anotherpage" component={AnotherPage} />
+                </Switch>
+            </Router>
+        </Provider>
     );
 };
 

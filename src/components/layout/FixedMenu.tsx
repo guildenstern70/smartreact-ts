@@ -23,7 +23,7 @@ const FixedMenu: React.FunctionComponent<{}> = () => (
                 Home
             </Menu.Item>
             <Menu.Item as={Link} to="/anotherpage">
-                Other Page
+                Redux Example
             </Menu.Item>
 
             <Dropdown item simple text="Your account">

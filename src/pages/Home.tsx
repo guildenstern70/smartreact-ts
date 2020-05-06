@@ -85,10 +85,9 @@ export default class Home extends React.Component<HomeProps, HomeState> {
 
     static description(): string {
         return (
-            'This is a template for a simple marketing or informational website.\n' +
-            'It includes a large callout called a jumbotron and three\n' +
-            'supporting pieces of content. Use it as a starting\n' +
-            'point to create something more unique.'
+            'This is an example of modern React-Redux application.\n' +
+            'It features integration with Semantic UI responsive library,\n' +
+            "and it's written entiorely in Typescript."
         );
     }
 }

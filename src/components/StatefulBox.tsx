@@ -20,8 +20,8 @@ interface StatefulState {
 }
 
 const MORNING: TimeOfDay = { description: 'Morning', color: 'pink' };
-const NOON: TimeOfDay = { description: 'Noon', color: 'orange'};
-const NIGHT: TimeOfDay = { description: 'Night', color: 'night'};
+const NOON: TimeOfDay = { description: 'Noon', color: 'orange' };
+const NIGHT: TimeOfDay = { description: 'Night', color: 'night' };
 
 export default class StatefulBox extends React.Component<StatefulProps, StatefulState> {
     state = {
@@ -78,7 +78,7 @@ export default class StatefulBox extends React.Component<StatefulProps, Stateful
         return (
             <Displayable display={this.props.display} floatRight={true}>
                 <Card>
-                    <Image src={this.getAssociatedImage()} wrapped ui={false}/>
+                    <Image src={this.getAssociatedImage()} wrapped ui={false} />
                     <Card.Content>
                         <Card.Header>{this.state.timeOfDay.description}</Card.Header>
                         <Card.Meta>
@@ -87,7 +87,7 @@ export default class StatefulBox extends React.Component<StatefulProps, Stateful
                         <Card.Description>Try this in different hours to see it change.</Card.Description>
                     </Card.Content>
                     <Card.Content extra>
-                        <Icon name="user"/>
+                        <Icon name="user" />
                         22 Friends
                     </Card.Content>
                 </Card>
