@@ -1,5 +1,5 @@
 /*
- * Copyright (c) Alessio Saltarin 2019.
+ * Copyright (c) Alessio Saltarin 2019-2021
  * Project SmartReact TS
  * MIT License - see LICENSE
  */
@@ -11,7 +11,7 @@ import { Container, Dropdown, Menu } from 'semantic-ui-react';
 import { Link } from 'react-router-dom';
 import AnimatedLogo from '../AnimatedLogo';
 
-const FixedMenu: React.FunctionComponent<{}> = () => (
+const FixedMenu: React.FC = () => (
     <Menu inverted>
         <Container>
             <Menu.Item as={Link} to="/home" header>

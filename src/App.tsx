@@ -1,5 +1,5 @@
 /*
- * Copyright (c) Alessio Saltarin 2019.
+ * Copyright (c) Alessio Saltarin 2019-2021
  * Project SmartReact TS
  * MIT License - see LICENSE
  */
@@ -14,7 +14,7 @@ import Home from './pages/Home';
 import AnotherPage from './pages/AnotherPage';
 import store from './redux/Store';
 
-const App: React.FC = (): React.ReactElement => {
+const App: React.FC = () => {
     document.title = 'SmartReact';
 
     return (

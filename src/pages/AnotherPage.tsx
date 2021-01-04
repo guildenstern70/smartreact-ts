@@ -1,5 +1,5 @@
 /*
- * Copyright (c) Alessio Saltarin 2019.
+ * Copyright (c) Alessio Saltarin 2019-2021
  * Project SmartReact TS
  * MIT License - see LICENSE
  */
@@ -39,9 +39,7 @@ export default class AnotherPage extends React.Component<AnotherPageProps> {
                     <Grid.Column width={6}>
                         <ReduxShow />
                     </Grid.Column>
-                    <Grid.Column width={4}>
-                        &nbsp;
-                    </Grid.Column>
+                    <Grid.Column width={4}>&nbsp;</Grid.Column>
                 </Grid>
             </TemplatePage>
         );

@@ -1,5 +1,5 @@
 /*
- * Copyright (c) Alessio Saltarin 2019.
+ * Copyright (c) Alessio Saltarin 2019-2021
  * Project SmartReact TS
  * MIT License - see LICENSE
  */
@@ -14,7 +14,7 @@ interface AnimatedProps {
     size: SemanticSIZES;
 }
 
-export default class AnimatedLogo extends React.Component<AnimatedProps, {}> {
+export default class AnimatedLogo extends React.Component<AnimatedProps, never> {
     static defaultProps = {
         size: 'mini',
     };

@@ -1,5 +1,5 @@
 /*
- * Copyright (c) Alessio Saltarin 2020.
+ * Copyright (c) Alessio Saltarin 2019-2021
  * Project SmartReact TS
  * MIT License - see LICENSE
  */
@@ -13,11 +13,13 @@ export const theAppState: StoreState = {
 };
 
 export const rootReducer: Reducer<StoreState, AllTypes> = (state, action): StoreState => {
+    if (state === undefined) return theAppState;
+
     switch (action.type) {
         case ADD_MESSAGE:
             return {
-                ...state!,
-                messages: [...state!.messages, action.message],
+                ...state,
+                messages: [...state.messages, action.message],
             };
     }
     return theAppState;
